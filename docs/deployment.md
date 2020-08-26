@@ -8,7 +8,7 @@ title: Deployment
 - For the [Helm based installation](#deploy-thanos-operator-with-helm) you need Helm v3.0.2 or later.
 
 
-# Deploy Thanos operator with Helm
+## Deploy Thanos operator with Helm
 
 <p align="center"><img src="./img/logo/helm.svg" width="150"></p>
 <p align="center">
@@ -32,8 +32,7 @@ Complete the following steps to deploy the Logging operator using Helm. Alternat
     ```
 
 ---
-
-# Check the Thanos operator deployment
+## Check the Thanos operator deployment
 
 To verify that the installation was successful, complete the following steps.
 

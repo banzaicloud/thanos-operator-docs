@@ -6,7 +6,7 @@ title: Example deployment modes
 
 The API reference of CRDs are documented [here](types/Readme.md)
 
-# Single Cluster Install
+## Single Cluster Install
 
 In this scenario we deploy a full featured Prometheus with Thanos as long term storage.
 
