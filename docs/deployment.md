@@ -30,7 +30,6 @@ Complete the following steps to deploy the Logging operator using Helm. Alternat
     helm install thanos-operator --namespace monitor banzaicloud-stable/thanos-operator --set manageCrds=false
     ```
 
----
 ## Check the Thanos operator deployment
 
 To verify that the installation was successful, complete the following steps.
