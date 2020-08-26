@@ -1,3 +1,7 @@
+---
+title: ThanosSpec
+---
+
 ### ThanosSpec
 #### ThanosSpec defines the desired state of Thanos
 

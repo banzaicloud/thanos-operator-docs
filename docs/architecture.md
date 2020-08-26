@@ -1,8 +1,7 @@
-<p align="center"><img src="./img/logo/thanos_operator_vertical.svg" width="260"></p>
-<p align="center">
+---
+title: Architecture
+---
 
-# Thanos Operator
- 
 ## Concepts
  
 ## Custom Resources
@@ -20,7 +19,8 @@ This resource responsible for operations done per object store.
   - Credential and configuration for object storage
 
 *example*
-```
+
+```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: ObjectStore
 metadata:

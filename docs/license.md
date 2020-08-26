@@ -1,4 +1,7 @@
-# License
+---
+title: License of Thanos operator
+shorttitle: License
+---
 
 Copyright (c) 2017-2020 [Banzai Cloud, Inc.](https://banzaicloud.com)
 

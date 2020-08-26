@@ -1,5 +1,6 @@
-<p align="center"><img src="./img/logo/thanos_operator_vertical.svg" width="260"></p>
-<p align="center">
+---
+title: Deployment
+---
 
 # Requirements
 

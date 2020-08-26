@@ -1,3 +1,7 @@
+---
+title: StoreEndpointSpec
+---
+
 ### StoreEndpointSpec
 #### StoreEndpointSpec defines the desired state of StoreEndpoint
 

@@ -1,10 +1,6 @@
-<p align="center"><img src="../img/logo/thanos_operator_vertical.svg" width="260"></p>
-<p align="center">
-
-
-# Single Cluster Thanos Install
-
-<p align="center"><img src="../img/Thanos-single-cluster.png" ></p>
+---
+title: Single Cluster Thanos Install
+---
 
 
 ## Prerequisites for Thanos

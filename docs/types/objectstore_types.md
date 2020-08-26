@@ -1,3 +1,7 @@
+---
+title: ObjectStoreSpec
+---
+
 ### ObjectStoreSpec
 #### ObjectStoreSpec defines the desired state of ObjectStore
 
