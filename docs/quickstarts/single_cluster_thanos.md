@@ -2,6 +2,7 @@
 title: Single Cluster Thanos Install
 ---
 
+<p align="center"><img src="../../img/thanos-single-cluster.png" ></p>
 
 ## Prerequisites for Thanos
 
@@ -77,8 +78,8 @@ title: Single Cluster Thanos Install
    ```
    
  ## Install the Thanos Operator with the One Eye CLI
-   
- [One Eye](https://banzaicloud.com/docs/one-eye/overview/) will take care of installing and configuring all the dependencies.
+
+ [One Eye](/docs/one-eye/overview/) will take care of installing and configuring all the dependencies.
 
   *install the One Eye CLI and deploy the Thanos operator*
  ```bash

@@ -10,10 +10,9 @@ title: Deployment
 
 ## Deploy Thanos operator with Helm
 
-<p align="center"><img src="./img/logo/helm.svg" width="150"></p>
-<p align="center">
+<p align="center"><img src="../img/logo/helm.svg" width="150"></p>
 
-Complete the following steps to deploy the Logging operator using Helm. Alternatively, you can also [install the operator using Kubernetes manifests](./Readme.md).
+Complete the following steps to deploy the Logging operator using Helm. Alternatively, you can also [install the operator using Kubernetes manifests](#FIXME).
 > Note: For the [Helm base installation](#deploy-thanos-operator-with-helm) you need Helm v3 or later.
 
 

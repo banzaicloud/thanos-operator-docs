@@ -4,7 +4,7 @@ title: Example deployment modes
 
 ## Custom resources
 
-The API reference of CRDs are documented [here](types/Readme.md)
+The API reference of CRDs are documented [here](types/)
 
 ## Single Cluster Install
 
