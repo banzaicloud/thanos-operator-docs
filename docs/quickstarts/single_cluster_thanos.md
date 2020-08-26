@@ -14,7 +14,7 @@ title: Single Cluster Thanos Install
 1. Create Object Store secret
 
     Example S3 configuration
-    ```
+    ```bash
     cat <<'EOF' >> object-store.yaml
     type: S3
     config:
@@ -27,15 +27,15 @@ title: Single Cluster Thanos Install
     ```
 
 1. Deploy the secret on Kubernetes
-    ```
+    ```bash
     kubectl create secret generic thanos --from-file=object-store.yaml=object-store.yaml --namespace monitor
     ```
 
 1. Create the Thanos sidecar definition
     Extra configuration for prometheus operator.
-    
+
     > Note: Prometheus-operator and Thanos MUST be in the same namespace.
-    ```
+    ```bash
     cat <<'EOF' >> thanos-sidecar.yaml
     prometheus:
       prometheusSpec:
@@ -57,13 +57,13 @@ title: Single Cluster Thanos Install
 
 
 1. Add the Kubernetes stable Helm repository
-    ```
+    ```bash
     helm repo add stable https://kubernetes-charts.storage.googleapis.com
     helm repo update
     ```
 
 1. Install prometheus-operator with the Thanos sidecar
-    ```
+    ```bash
     helm install prometheus-operator --namespace monitor stable/prometheus-operator -f thanos-sidecar.yaml --set manageCrds=false
     ```
 
@@ -76,7 +76,7 @@ title: Single Cluster Thanos Install
     ```bash
     helm install thanos-operator --namespace monitor banzaicloud-stable/thanos-operator --set manageCrds=false
    ```
-   
+
  ## Install the Thanos Operator with the One Eye CLI
 
  [One Eye](/docs/one-eye/overview/) will take care of installing and configuring all the dependencies.

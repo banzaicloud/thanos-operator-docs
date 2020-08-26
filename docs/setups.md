@@ -15,7 +15,8 @@ In this scenario we deploy a full featured Prometheus with Thanos as long term s
 ### Install secret
 
 Example S3 configuration
-```
+
+```yaml
 type: S3
 config:
   endpoint: "s3.eu-west-1.amazonaws.com"
@@ -26,7 +27,7 @@ config:
 ```
 
 Deploy the secret on Kubernetes
-```
+```bash
 kubectl create secret generic thanos --from-file=object-store.yaml=object-store.yaml
 ```
 
@@ -35,7 +36,7 @@ kubectl create secret generic thanos --from-file=object-store.yaml=object-store.
 > Note: Prometheus-operator and Thanos MUST be in the same namespace.
 
 *thanos-sidecar.yaml*
-```
+```yaml
 prometheus:
   prometheusSpec:
     thanos:
@@ -50,7 +51,7 @@ prometheus:
 Remember to set `externalLabels` as it identifies the Prometheus instance for Thanos.
 
 ### Install prometheus-operator
-```
+```bash
 helm install --name monitor stable/prometheus-operator -f thanos-sidecar.yaml
 ```
 
@@ -58,14 +59,14 @@ helm install --name monitor stable/prometheus-operator -f thanos-sidecar.yaml
 
 For now the kustomize deploy model is available
 
-```
+```bash
 make install
 make deploy IMG=banzaicloud/thanos-operator:latest
 ```
 
 ### Apply CRDs for single cluster
 Thanos
-```
+```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: Thanos
 metadata:
@@ -77,7 +78,7 @@ spec:
 ```
 
 ObjectStore
-```
+```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: ObjectStore
 metadata:
@@ -93,7 +94,7 @@ spec:
 ```
 
 StoreEndpoint
-```
+```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: StoreEndpoint
 metadata:
@@ -115,7 +116,7 @@ You can define different Prometheuses and Endpoints via `StoreEndpoint` CRs.
 ## Query discovery
 Automatically discover all Query instances (created by CRD) on the cluster
 
-```
+```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: Thanos
 metadata:
@@ -130,7 +131,7 @@ Remote URLs
   - format: `http(s)://<fqdn>:<port>`
 
 StoreEndpoint
-```
+```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: StoreEndpoint
 metadata:

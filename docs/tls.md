@@ -5,7 +5,8 @@ title: TLS
 To set up secure connection you need to generate your certs.
 
 example TLS client, server secret
-```
+
+```yaml
 apiVersion: v1
 kind: Secret
 type: kubernetes.io/tls
