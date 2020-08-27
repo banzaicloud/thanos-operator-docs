@@ -1,5 +1,7 @@
 ---
 title: StoreEndpointSpec
+weight: 200
+generated_file: true
 ---
 
 ### StoreEndpointSpec
