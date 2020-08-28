@@ -1,0 +1,18 @@
+name: Update generated docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      release-tag:
+        description: 'Release tag'
+        required: true
+
+jobs:
+  update-generated-docs:
+    name: Update generated docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Update
+        run: scripts/update-generated-docs.sh ${{ github.event.inputs.release-tag }}
