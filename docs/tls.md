@@ -1,5 +1,6 @@
 ---
 title: TLS
+weight: 500
 ---
 
 To set up secure connection you need to generate your certs.

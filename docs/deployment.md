@@ -1,5 +1,6 @@
 ---
 title: Deployment
+weight: 100
 ---
 
 # Requirements

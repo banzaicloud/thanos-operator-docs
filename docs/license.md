@@ -1,6 +1,7 @@
 ---
 title: License of Thanos operator
 shorttitle: License
+weight: 10000
 ---
 
 Copyright (c) 2017-2021 [Banzai Cloud, Inc.](https://banzaicloud.com)

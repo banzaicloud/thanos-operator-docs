@@ -1,5 +1,6 @@
 ---
 title: Quickstart
+weight: 200
 ---
 
 ## Thanos Operator quick start guides
