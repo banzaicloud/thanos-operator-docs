@@ -1,5 +1,6 @@
 ---
-title: Single Cluster Thanos Install
+title: Single Cluster installation
+weight: 100
 ---
 
 <p align="center"><img src="../../img/thanos-single-cluster2.png" ></p>
