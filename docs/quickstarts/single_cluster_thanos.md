@@ -2,7 +2,7 @@
 title: Single Cluster Thanos Install
 ---
 
-<p align="center"><img src="../../img/thanos-single-cluster.png" ></p>
+<p align="center"><img src="../../img/thanos-single-cluster2.png" ></p>
 
 ## Prerequisites for Thanos
 
@@ -14,6 +14,7 @@ title: Single Cluster Thanos Install
 1. Create Object Store secret
 
     Example S3 configuration
+
     ```bash
     cat <<'EOF' >> object-store.yaml
     type: S3
@@ -27,6 +28,7 @@ title: Single Cluster Thanos Install
     ```
 
 1. Deploy the secret on Kubernetes
+
     ```bash
     kubectl create secret generic thanos --from-file=object-store.yaml=object-store.yaml --namespace monitor
     ```
@@ -35,13 +37,14 @@ title: Single Cluster Thanos Install
     Extra configuration for prometheus operator.
 
     > Note: Prometheus-operator and Thanos MUST be in the same namespace.
+
     ```bash
     cat <<'EOF' >> thanos-sidecar.yaml
     prometheus:
       prometheusSpec:
         thanos:
-          image: quay.io/thanos/thanos:v0.9.0
-          version: v0.9.0
+          image: quay.io/thanos/thanos:v0.17.2
+          version: v0.17.2
           objectStorageConfig:
             name: thanos
             key: object-store.yaml
@@ -57,14 +60,16 @@ title: Single Cluster Thanos Install
 
 
 1. Add the Kubernetes stable Helm repository
+
     ```bash
-    helm repo add stable https://kubernetes-charts.storage.googleapis.com
+    helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
     helm repo update
     ```
 
 1. Install prometheus-operator with the Thanos sidecar
+
     ```bash
-    helm install prometheus-operator --namespace monitor stable/prometheus-operator -f thanos-sidecar.yaml --set manageCrds=false
+    helm install prometheus-operator --namespace monitor prometheus-community/kube-prometheus-stack -f thanos-sidecar.yaml
     ```
 
 1. Add the operator chart repository.
@@ -73,8 +78,9 @@ title: Single Cluster Thanos Install
     helm repo update
     ```
 1. Install the Thanos Operator
+
     ```bash
-    helm install thanos-operator --namespace monitor banzaicloud-stable/thanos-operator --set manageCrds=false
+    helm install thanos-operator --namespace monitor banzaicloud-stable/thanos-operator
    ```
 
  ## Install the Thanos Operator with the One Eye CLI

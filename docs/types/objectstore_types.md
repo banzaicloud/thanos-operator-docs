@@ -15,7 +15,9 @@ generated_file: true
 ### Compactor
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-|  | BaseObject | Yes | - |  |
+| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
+| deploymentOverrides | *typeoverride.Deployment | No | - |  |
+| serviceOverrides | *typeoverride.Service | No | - |  |
 | metrics | *Metrics | No | - |  |
 | httpAddress | string | No | - | Listen host:port for HTTP endpoints.<br> |
 | httpGracePeriod | metav1.Duration | No | - | Time to wait after an interrupt received for HTTP Server.<br> |
@@ -32,8 +34,11 @@ generated_file: true
 ### BucketWeb
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-|  | BaseObject | Yes | - |  |
+| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
+| deploymentOverrides | *typeoverride.Deployment | No | - |  |
+| serviceOverrides | *typeoverride.Service | No | - |  |
 | metrics | *Metrics | No | - |  |
+| HTTPIngress | *Ingress | No | - |  |
 | httpAddress | string | No | - | Listen host:port for HTTP endpoints.<br> |
 | httpGracePeriod | metav1.Duration | No | - | Time to wait after an interrupt received for HTTP Server.<br> |
 | web_external_prefix | string | No | - | Static prefix for all HTML links and redirect URLs in the bucket web UI interface. Actual endpoints are still served on / or the web.route-prefix. This allows thanos bucket web UI to be served behind a reverse proxy that strips a URL sub-path.<br> |

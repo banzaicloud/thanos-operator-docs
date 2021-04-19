@@ -9,7 +9,9 @@ generated_file: true
 
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| url | string | No | - | Foo is an example field of StoreEndpoint. Edit StoreEndpoint_types.go to remove/update<br> |
+| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
+| serviceOverrides | *typeoverride.Service | No | - |  |
+| url | string | No | - |  |
 | selector | *KubernetesSelector | No | - |  |
 | config | secret.Secret | No | - |  |
 | thanos | string | Yes | - |  |
