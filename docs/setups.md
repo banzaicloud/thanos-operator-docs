@@ -1,10 +1,9 @@
 ---
-title: Example deployment modes
+title: Sample deployment modes
+weight: 700
 ---
 
-## Custom resources
-
-The API reference of CRDs are documented [here](types/)
+> Note: For details on the mentioned custom resources, see {{% xref "modules/thanos-operator/docs/types/_index.md" %}}.
 
 ## Single Cluster Install
 
@@ -27,6 +26,7 @@ config:
 ```
 
 Deploy the secret on Kubernetes
+
 ```bash
 kubectl create secret generic thanos --from-file=object-store.yaml=object-store.yaml
 ```
@@ -36,6 +36,7 @@ kubectl create secret generic thanos --from-file=object-store.yaml=object-store.
 > Note: Prometheus-operator and Thanos MUST be in the same namespace.
 
 *thanos-sidecar.yaml*
+
 ```yaml
 prometheus:
   prometheusSpec:

@@ -1,15 +1,8 @@
 ---
 title: Available Types
+shorttitle: CRDs
+weight: 600
 generated_file: true
 ---
 
-For more information please click on the name
-<center>
-
-| Name | Description |
-|---|---|
-| **[ObjectStoreSpec](objectstore_types/)** |  |
-| **[StoreEndpointSpec](storeendpoint_types/)** |  |
-| **[ThanosSpec](thanos_types/)** |  |
-</center>
-
+{{< toc >}}
