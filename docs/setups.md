@@ -3,7 +3,7 @@ title: Sample deployment modes
 weight: 700
 ---
 
-> Note: For details on the mentioned custom resources, see {{% xref "modules/thanos-operator/docs/types/_index.md" %}}.
+> Note: For details on the mentioned custom resources, see {{% xref "/modules/thanos-operator/docs/types/_index.md" %}}.
 
 ## Single Cluster Install
 
