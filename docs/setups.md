@@ -51,6 +51,7 @@ prometheus:
 Remember to set `externalLabels` as it identifies the Prometheus instance for Thanos.
 
 ### Install prometheus-operator
+
 ```bash
 helm install --name monitor stable/prometheus-operator -f thanos-sidecar.yaml
 ```
@@ -65,7 +66,9 @@ make deploy IMG=banzaicloud/thanos-operator:latest
 ```
 
 ### Apply CRDs for single cluster
+
 Thanos
+
 ```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: Thanos
@@ -78,6 +81,7 @@ spec:
 ```
 
 ObjectStore
+
 ```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: ObjectStore
@@ -94,6 +98,7 @@ spec:
 ```
 
 StoreEndpoint
+
 ```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: StoreEndpoint
@@ -114,6 +119,7 @@ spec:
 You can define different Prometheuses and Endpoints via `StoreEndpoint` CRs.
 
 ## Query discovery
+
 Automatically discover all Query instances (created by CRD) on the cluster
 
 ```yaml
@@ -127,10 +133,12 @@ spec:
 ```
 
 ## Remote Prometheus for Thanos
+
 Remote URLs
   - format: `http(s)://<fqdn>:<port>`
 
 StoreEndpoint
+
 ```yaml
 apiVersion: monitoring.banzaicloud.io/v1alpha1
 kind: StoreEndpoint

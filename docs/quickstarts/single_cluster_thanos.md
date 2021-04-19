@@ -4,9 +4,10 @@ title: Single Cluster Thanos Install
 
 <p align="center"><img src="../../img/thanos-single-cluster2.png" ></p>
 
-## Prerequisites for Thanos
+## Prerequisites
 
 1. Create `monitor` namespace
+
     ```bash
     kubectl create namespace monitor
     ```
@@ -55,9 +56,7 @@ title: Single Cluster Thanos Install
 
     Remember to set `externalLabels` as it identifies the Prometheus instance for Thanos.
 
-
 ## Install the Thanos Operator with Helm
-
 
 1. Add the Kubernetes stable Helm repository
 
@@ -73,26 +72,32 @@ title: Single Cluster Thanos Install
     ```
 
 1. Add the operator chart repository.
+
     ```bash
     helm repo add banzaicloud-stable https://kubernetes-charts.banzaicloud.com
     helm repo update
     ```
-1. Install the Thanos Operator
+
+1. Install the Thanos operator.
 
     ```bash
     helm install thanos-operator --namespace monitor banzaicloud-stable/thanos-operator
    ```
 
- ## Install the Thanos Operator with the One Eye CLI
+## Install the Thanos operator with the One Eye CLI
 
  [One Eye](/docs/one-eye/overview/) will take care of installing and configuring all the dependencies.
 
-  *install the One Eye CLI and deploy the Thanos operator*
- ```bash
- curl https://getoneeye.sh | sh && one-eye thanos install --prometheus --secret one-eye/object-store.yaml
- ```
+1. Install the [One Eye CLI](/docs/one-eye/cli/install/).
 
-  *verify the installation by opening the thanos query page*
- ```bash
-   one-eye thanos connect
- ```
+1. Deploy the Thanos operator with the secret of the object store you have created in the [Prerequisites](#prerequisites).
+
+    ```bash
+    one-eye thanos install --prometheus --secret one-eye/object-store.yaml
+    ```
+
+1. Verify the installation by opening the Thanos query page.
+
+    ```bash
+      one-eye thanos connect
+    ```

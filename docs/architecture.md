@@ -10,6 +10,7 @@ weight: 300
 ### ObjectStore
 
 This resource responsible for operations done per object store.
+
 - Compactor
   - Must run 1 instance per bucket
   - Responsible for downsampling and compacting
@@ -54,6 +55,7 @@ spec:
   - 
   
 ### StoreEndpoint
+
 - Define local or remote StoreAPI providers
 - Sidecar, Rule, Query, ...
 - Local (Selector) or Remote (URL) configuration

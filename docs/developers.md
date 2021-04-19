@@ -22,6 +22,7 @@ This is best used in rapid development workflows, you will need two terminals fo
     ```
 
 3. Check that Thanos runs properly:
+
     ```bash
     kubectl port-forward service/thanos-sample-query 10902 &
     open http://localhost:10902/stores
@@ -30,14 +31,15 @@ This is best used in rapid development workflows, you will need two terminals fo
 ## Containerized flow
 
 ### Build & Push container
-```
+
+```bash
 make docker-build IMG=banzaicloud/thanos-operator:latest
 make docker-push IMG=banzaicloud/thanos-operator:latest
 ```
 
 ## Install operator the cluster
 
-```
+```bash
 export KUBECONFIG="<kubeconfig location>"
 make install
 make deploy IMG=banzaicloud/thanos-operator:latest
