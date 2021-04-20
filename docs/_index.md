@@ -14,7 +14,7 @@ The [Thanos operator](https://github.com:banzaicloud/thanos-operator.git) is a K
 
 [Thanos](http://thanos.io) is an open source, highly available Prometheus setup with long-term storage capabilities.
 
-![Thanos architecture](../img/thanos-single-cluster.png)
+![Thanos architecture](img/thanos-single-cluster.png)
 
 ## Feature highlights
 
