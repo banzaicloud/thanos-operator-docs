@@ -32,6 +32,18 @@ weight: 100
           storeGateway: {}
         ```
 
+        To automatically discover all Query instances on the cluster, set the **queryDiscovery** parameter to true:
+
+        ```yaml
+        apiVersion: monitoring.banzaicloud.io/v1alpha1
+        kind: Thanos
+        metadata:
+          name: query
+        spec:
+          query: {}
+          queryDiscovery: true
+        ```
+
     - ObjectStore
 
         ```yaml
@@ -66,7 +78,24 @@ weight: 100
         selector: {}
         ```
 
-    > Note: If you are running multiple Prometheus instances on single cluster, you can define different Prometheuses and Endpoints in the [StoreEndpoint CRDs]({{< relref "/docs/one-eye/thanos-operator/types/storeendpoint_types.md" >}}).
+        You can specify the URL of remote Prometheus instances in the following **http(s)://<fqdn>:<port>** format, for example:
+
+        ```yaml
+        apiVersion: monitoring.banzaicloud.io/v1alpha1
+        kind: StoreEndpoint
+        metadata:
+          name: storeendpoint-sample
+        spec:
+          thanos: thanos-sample
+          config:
+            mountFrom:
+              secretKeyRef:
+                name: thanos
+                key: object-store.yaml
+          url: http://example.com:10901
+        ```
+
+        > Note: If you are running multiple Prometheus instances on single cluster, you can define different Prometheuses and Endpoints in the [StoreEndpoint CRDs]({{< relref "/docs/one-eye/thanos-operator/types/storeendpoint_types.md" >}}).
 
 1. [Validate your deployment](#validate)
 
