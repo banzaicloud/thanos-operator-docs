@@ -8,7 +8,7 @@ weight: 700
 
 Welcome to the Thanos operator documentation!
 
-The [Thanos operator](https://github.com:banzaicloud/thanos-operator.git) is a Kubernetes operator to manage the [Thanos](http://thanos.io) stack deployment on Kubernetes.
+The [Thanos operator](https://github.com/banzaicloud/thanos-operator.git) is a Kubernetes operator to manage the [Thanos](http://thanos.io) stack deployment on Kubernetes.
 
 ## What is Thanos
 

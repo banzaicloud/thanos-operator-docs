@@ -11,7 +11,7 @@ weight: 300
 
 The Thanos operator is instrumented via custom resources. For the detailed options of the custom resources, see {{% xref "/modules/thanos-operator/docs/types/_index.md" %}}.
 
-### [ObjectStore](../types/objectstore_types.md)
+### [ObjectStore](../types/objectstore_types/)
 
 This custom resource is responsible for object store (`bucket`) management. Thanos compacts and downsamples on storage buckets, and it is highly recommended that you run only **one** `compactor` per bucket.
 
@@ -44,7 +44,7 @@ spec:
               storage: 1Gi
 ```
 
-### [Thanos](../types/thanos_types.md) and [StoreEndpoint](../types/storeendpoint_types.md)
+### [Thanos](../types/thanos_types/) and [StoreEndpoint](../types/storeendpoint_types/)
 
 Thanos is the main custom resource responsible for Query, Store and Rule configurations. It has a special relationship with StoreEndpoint, which represents distinct StoreAPI endpoints. These can be Sidecar, Store, Rule or any other Store API providers. Thanos resources instantiate per StoreEndpoint. This means that you can use a single Thanos configuration for several Prometheus instances or clusters.
 
