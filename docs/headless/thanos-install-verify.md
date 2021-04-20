@@ -1,4 +1,4 @@
-## Check the Thanos operator deployment
+## Validate Thanos operator deployment {#validate}
 
 To verify that the installation was successful, complete the following steps.
 
