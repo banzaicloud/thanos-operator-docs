@@ -36,3 +36,29 @@ spec:
             - name: query-frontend
               image: <custom/image:tag>
 ```
+
+## Set requests and limits for store
+
+The following example sets resource requests and limits for stores.
+
+```yaml
+apiVersion: monitoring.banzaicloud.io/v1alpha1
+kind: Thanos
+metadata:
+  name: thanos-sample
+spec:
+  storeGateway:
+    deploymentOverrides:
+      spec:
+        template:
+          spec:
+            containers:
+            - name: store
+              resources:
+                requests:
+                  memory: "1Gi"
+                  cpu: "250m"
+                limits:
+                  memory: "2Gi"
+                  cpu: "500m"
+```
