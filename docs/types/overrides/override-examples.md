@@ -10,8 +10,9 @@ The following examples show you how you can [override parameters](../) in the Th
 The following example changes the deployment strategy of the query frontend pods to Recreate (instead of the default RollingUpdate). Other parameters of the deployment are left to use their default values, so they don't have to be included in the CRD.
 
 ```yaml
-Kind: Thanos
-Spec:
+apiVersion: monitoring.banzaicloud.io/v1alpha1
+kind: Thanos
+spec:
   queryFrontend:
     deploymentOverrides:
       spec:
@@ -23,8 +24,9 @@ Spec:
 The following example specifies a custom container image to use for the query-frontend pods.
 
 ```yaml
-Kind: Thanos
-Spec:
+apiVersion: monitoring.banzaicloud.io/v1alpha1
+kind: Thanos
+spec:
   queryFrontend:
     deploymentOverrides:
       spec:
