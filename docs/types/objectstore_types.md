@@ -10,14 +10,14 @@ generated_file: true
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
 | config | secret.Secret | Yes | - | Config<br> |
-| compactor | *Compactor | No | - |  |
-| bucketWeb | *BucketWeb | No | - |  |
+| compactor | *Compactor | No | - | See [Compactor](#compactor)<br> |
+| bucketWeb | *BucketWeb | No | - | See [BucketWeb](#bucketweb)<br> |
 ### Compactor
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
-| deploymentOverrides | *typeoverride.Deployment | No | - |  |
-| serviceOverrides | *typeoverride.Service | No | - |  |
+| metaOverrides | *typeoverride.ObjectMeta | No | - | See [ObjectMeta override](../overrides/override/#objectmeta)<br> |
+| deploymentOverrides | *typeoverride.Deployment | No | - | See [Deployment override](../overrides/override/#deployment)<br> |
+| serviceOverrides | *typeoverride.Service | No | - | See [Service override](../overrides/override/#service)<br> |
 | metrics | *Metrics | No | - |  |
 | httpAddress | string | No | - | Listen host:port for HTTP endpoints.<br> |
 | httpGracePeriod | metav1.Duration | No | - | Time to wait after an interrupt received for HTTP Server.<br> |
@@ -34,9 +34,9 @@ generated_file: true
 ### BucketWeb
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
-| deploymentOverrides | *typeoverride.Deployment | No | - |  |
-| serviceOverrides | *typeoverride.Service | No | - |  |
+| metaOverrides | *typeoverride.ObjectMeta | No | - | See [ObjectMeta override](../overrides/override/#objectmeta)<br> |
+| deploymentOverrides | *typeoverride.Deployment | No | - | See [Deployment override](../overrides/override/#deployment)<br> |
+| serviceOverrides | *typeoverride.Service | No | - | See [Service override](../overrides/override/#service)<br> |
 | metrics | *Metrics | No | - |  |
 | HTTPIngress | *Ingress | No | - |  |
 | httpAddress | string | No | - | Listen host:port for HTTP endpoints.<br> |

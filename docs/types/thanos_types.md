@@ -30,16 +30,16 @@ generated_file: true
 ### Ingress
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| ingressOverrides | *typeoverride.IngressNetworkingV1beta1 | No | - |  |
+| ingressOverrides | *typeoverride.IngressNetworkingV1beta1 | No | - | See [Ingress override](../overrides/override/#ingressnetworkingv1beta1)<br> |
 | certificate | string | No | - | Certificate in the ingress namespace<br> |
 | host | string | No | - |  |
 | path | string | No | - |  |
 ### QueryFrontend
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
-| deploymentOverrides | *typeoverride.Deployment | No | - |  |
-| serviceOverrides | *typeoverride.Service | No | - |  |
+| metaOverrides | *typeoverride.ObjectMeta | No | - | See [ObjectMeta override](../overrides/override/#objectmeta)<br> |
+| deploymentOverrides | *typeoverride.Deployment | No | - | See [Deployment override](../overrides/override/#deployment)<br> |
+| serviceOverrides | *typeoverride.Service | No | - | See [Service override](../overrides/override/#service)<br> |
 | metrics | *Metrics | No | - |  |
 | HTTPIngress | *Ingress | No | - |  |
 | logLevel | string | No | - |  |
@@ -61,9 +61,9 @@ generated_file: true
 ### Query
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| metaOverrides | typeoverride.ObjectMeta | No | - |  |
-| deploymentOverrides | *typeoverride.Deployment | No | - |  |
-| serviceOverrides | *typeoverride.Service | No | - |  |
+| metaOverrides | typeoverride.ObjectMeta | No | - | See [ObjectMeta override](../overrides/override/#objectmeta)<br> |
+| deploymentOverrides | *typeoverride.Deployment | No | - | See [Deployment override](../overrides/override/#deployment)<br> |
+| serviceOverrides | *typeoverride.Service | No | - | See [Service override](../overrides/override/#service)<br> |
 | metrics | *Metrics | No | - |  |
 | HTTPIngress | *Ingress | No | - |  |
 | GRPCIngress | *Ingress | No | - |  |
@@ -136,9 +136,9 @@ generated_file: true
 ### Rule
 | Variable Name | Type | Required | Default | Description |
 |---|---|---|---|---|
-| metaOverrides | *typeoverride.ObjectMeta | No | - |  |
-| statefulsetOverrides | *typeoverride.StatefulSet | No | - |  |
-| serviceOverrides | *typeoverride.Service | No | - |  |
+| metaOverrides | *typeoverride.ObjectMeta | No | - | See [ObjectMeta override](../overrides/override/#objectmeta)<br> |
+| statefulsetOverrides | *typeoverride.StatefulSet | No | - | See [StatefulSet override](../overrides/override/#statefulset)<br> |
+| serviceOverrides | *typeoverride.Service | No | - | See [Service override](../overrides/override/#service)<br> |
 | metrics | *Metrics | No | - |  |
 | HTTPIngress | *Ingress | No | - |  |
 | GRPCIngress | *Ingress | No | - |  |
