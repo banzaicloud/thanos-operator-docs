@@ -1,6 +1,6 @@
 ## Install the Thanos operator with Helm {#install-helm}
 
-To install the Thanos operator with Helm 3, complete the following steps. Alternatively, you can install the Thanos operator with the [One Eye CLI]({{< relref "/docs/one-eye/thanos-operator/install.md#install-one-eye" >}}).
+To install the Thanos operator with Helm 3, complete the following steps. Alternatively, you can install the Thanos operator with the [One Eye CLI]({{< relref "/docs/thanos-operator/install.md#install-one-eye" >}}).
 
 1. Add the Prometheus operator Helm repository.
 

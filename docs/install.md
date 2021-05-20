@@ -3,9 +3,9 @@ title: Install
 weight: 100
 ---
 
-{{< include-headless "thanos-install-prerequisites.md" "one-eye/thanos-operator" >}}
+{{< include-headless "thanos-install-prerequisites.md" "thanos-operator" >}}
 
-{{< include-headless "thanos-install-helm.md" "one-eye/thanos-operator" >}}
+{{< include-headless "thanos-install-helm.md" "thanos-operator" >}}
 
 ## Install the Thanos operator from Kubernetes manifests {#install-manifest}
 
@@ -95,15 +95,15 @@ weight: 100
           url: http://example.com:10901
         ```
 
-        > Note: If you are running multiple Prometheus instances on single cluster, you can define different Prometheuses and Endpoints in the [StoreEndpoint CRDs]({{< relref "/docs/one-eye/thanos-operator/types/storeendpoint_types.md" >}}).
+        > Note: If you are running multiple Prometheus instances on single cluster, you can define different Prometheuses and Endpoints in the [StoreEndpoint CRDs]({{< relref "/docs/thanos-operator/types/storeendpoint_types.md" >}}).
 
 1. [Validate your deployment](#validate)
 
 ## Install the Thanos operator with the One Eye CLI {#install-one-eye}
 
-[One Eye](/docs/one-eye/overview/) is a commercial product that can install and configure the Thanos operator and all its dependencies.
+[One Eye](/docs/overview/) is a commercial product that can install and configure the Thanos operator and all its dependencies.
 
-1. Install the [One Eye CLI](/docs/one-eye/cli/install/).
+1. Install the [One Eye CLI](/docs/cli/install/).
 
 1. Deploy the Thanos operator, optionally with the secret of the object store you have created in the [Prerequisites](#prerequisites).
 
@@ -113,4 +113,4 @@ weight: 100
 
 1. [Validate your deployment](#validate)
 
-{{< include-headless "thanos-install-verify.md" "one-eye/thanos-operator" >}}
+{{< include-headless "thanos-install-verify.md" "thanos-operator" >}}

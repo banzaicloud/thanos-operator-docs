@@ -3,7 +3,7 @@ title: Multicluster installation
 weight: 200
 ---
 
-Once you have a [single cluster deployment of Thanos]({{< relref "/docs/one-eye/thanos-operator/quickstarts/single_cluster_thanos.md" >}}), you might want to access the metrics of several clusters in one location. There are different approaches to achieve that.
+Once you have a [single cluster deployment of Thanos]({{< relref "/docs/thanos-operator/quickstarts/single_cluster_thanos.md" >}}), you might want to access the metrics of several clusters in one location. There are different approaches to achieve that.
 
 ## Multicluster deployment
 
